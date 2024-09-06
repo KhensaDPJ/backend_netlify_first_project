@@ -1,0 +1,19 @@
+{
+  "name": "y",
+  "version": "y",
+  "description": "y",
+  "main": "server",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "validator": "^13.12.0"
+  }
+}
