@@ -7,13 +7,17 @@
   "type": "module",
   "scripts": {
     "start": "nodemon server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "swagger": "nodemon --ignore swagger.json swagger.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.3",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "nodemon": "^3.1.4",
+    "swagger-autogen": "^2.23.7",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
     "validator": "^13.12.0"
   }
 }
