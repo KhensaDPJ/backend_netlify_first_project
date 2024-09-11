@@ -12,7 +12,7 @@
     }
   ],
   "paths": {
-    "/product/list": {
+    "/api/product/list": {
       "get": {
         "description": "",
         "responses": {
@@ -25,7 +25,7 @@
         }
       }
     },
-    "/product/create": {
+    "/api/product/create": {
       "post": {
         "description": "",
         "parameters": [
@@ -76,7 +76,7 @@
         }
       }
     },
-    "/product/update": {
+    "/api/product/update": {
       "patch": {
         "description": "",
         "parameters": [
@@ -130,7 +130,7 @@
         }
       }
     },
-    "/product/delete/{id}": {
+    "/api/product/delete/{id}": {
       "delete": {
         "description": "",
         "parameters": [
