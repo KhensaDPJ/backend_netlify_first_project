@@ -10,7 +10,7 @@ const doc = {
     },
     servers: [
       {
-        url: 'http://localhost:3000',    // URL of the local development server
+        url: 'https://demonodeproject.vercel.app',    // URL of the local development server
         description: 'Local development server' // Description of the server
       },
     ],
