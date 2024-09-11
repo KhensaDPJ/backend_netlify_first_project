@@ -19,7 +19,7 @@ app.use(express.json());
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-
+app.use(express.static(path.join(__dirname, 'node_modules/swagger-ui-dist')));
 app.use('/api/', authRoutes);
 
 app.listen(port, () => {
