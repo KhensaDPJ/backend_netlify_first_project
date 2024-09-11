@@ -1,10 +1,15 @@
-// server.js
 import express from "express";
 import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsDoc from "swagger-jsdoc";
 import swaggerJson from './swagger.json' assert { type: 'json' }; 
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+// Manually define __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const port = 3000;
 const app = express();
@@ -19,7 +24,10 @@ app.use(express.json());
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
-app.use(express.static(path.join(__dirname, 'node_modules/swagger-ui-dist')));
+
+// Serve static files for Swagger UI
+app.use(express.static(join(__dirname, 'node_modules/swagger-ui-dist')));
+
 app.use('/api/', authRoutes);
 
 app.listen(port, () => {
