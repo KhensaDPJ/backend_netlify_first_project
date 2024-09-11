@@ -28,7 +28,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 // Serve static files for Swagger UI
 app.use(express.static(join(__dirname, 'node_modules/swagger-ui-dist')));
 
-app.use('/api/', authRoutes);
+app.use(authRoutes);
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
