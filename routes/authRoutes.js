@@ -5,7 +5,7 @@ import productController from "../controllers/product.controller.js";
 const router = express.Router();
 
 router.get('/api/product/list',productController.productList);
-router.post('/api/product/create', authMiddleware.authenticateJWT,productController.addProduct);
+router.post('/api/product/create',productController.addProduct);
 router.patch('/api/product/update', authMiddleware.authenticateJWT,productController.updateProduct);
 router.delete('/api/product/delete/:id', authMiddleware.authenticateJWT,productController.deleteProduct);
 
